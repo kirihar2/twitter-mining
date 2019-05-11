@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+    - source: /
+      destination: /apps/twitter
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 180
+  ApplicationStop:
+   - location: scripts/stop_server.sh
+     timeout: 180
+  ApplicationStart:
+    - location: scripts/install_service.sh
+      timeout: 180
