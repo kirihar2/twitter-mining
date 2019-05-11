@@ -16,7 +16,6 @@ class TrainingData:
         """Read in data from the csv path given into pandas and return training and test data."""
         training_data = []
         testing_data = []
-        positive_data = []
         with open(csv_path, encoding = "ISO-8859-1") as file: 
             reader = csv.reader(file)
             while True: 

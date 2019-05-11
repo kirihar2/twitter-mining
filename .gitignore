@@ -1,3 +1,4 @@
 *.csv
 *.pdf
-
+data_env/*
+credentials.py
