@@ -2,3 +2,4 @@
 *.pdf
 data_env/*
 credentials.py
+data/*
