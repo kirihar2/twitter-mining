@@ -9,6 +9,7 @@ filename = 'data/dadjokes-'+today+'.txt'
 trained_model_filename = 'weights/textgenrnn_weights.hdf5'
 
 def train(epochs=1):
+    print("Epochs "+str(epochs))
     textgen = textgenrnn()
     if not os.path.isfile(filename):
         getData()
