@@ -3,7 +3,7 @@ from credentials import Credentials
 import os
 from datetime import datetime
 from training_data_pre_processing import TrainingData
-def getData():
+def getData(tweet_count=500):
     cred = Credentials()
     preprocessor = TrainingData()
 
@@ -12,7 +12,7 @@ def getData():
     today = datetime.now().strftime("%Y-%m-%d")
     filename = 'data/dadjokes-'+today+'.txt'
     api = tweepy.API(auth)
-    public_tweets = api.user_timeline('@dadsaysjokes',count=500)
+    public_tweets = api.user_timeline('@dadsaysjokes',tweet_count)
     with open(filename,'w') as out:
         for tweet in public_tweets:
             sanitized_tweet = tweet.text
