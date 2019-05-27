@@ -1,4 +1,8 @@
 nltk
 tensorflow
+numpy > 1.5
 tweepy
 textgenrnn
+request
+django == 2.*
+requests
