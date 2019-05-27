@@ -6,3 +6,5 @@ data/*
 *__pycache__/*
 .vscode/*
 .ipynb_checkpoints/*
+**node_module**
+**.idea**
