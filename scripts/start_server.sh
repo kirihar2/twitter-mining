@@ -1,3 +1,3 @@
 #!/bin/bash
 echo Starting backend django server 
-python web/backend/manage.py runserver
+python3 web/backend/manage.py runserver
