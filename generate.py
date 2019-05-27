@@ -22,7 +22,7 @@ def generate():
 
 def main():
     # print command line arguments
-    arg = sys.argv[1]:
+    arg = sys.argv[1]
     if arg == "generate": 
         generate()
     elif arg == "train":
