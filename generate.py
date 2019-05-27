@@ -22,13 +22,13 @@ def generate():
 
 def main():
     # print command line arguments
-    for arg in sys.argv[1:]:
-        if arg == "generate": 
-            generate()
-        elif arg == "train":
-            train()
-        else: 
-            raise ValueError(arg+" not a valid operator. Please enter argument \'generate\' or \'train\'")
+    arg = sys.argv[1]:
+    if arg == "generate": 
+        generate()
+    elif arg == "train":
+        train(epochs=sys.argv[2])
+    else: 
+        raise ValueError(arg+" not a valid operator. Please enter argument \'generate\' or \'train\'")
         
 if __name__ == "__main__":
     main()
