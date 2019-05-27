@@ -27,7 +27,7 @@ def main():
     if arg == "generate": 
         generate()
     elif arg == "train":
-        train(epochs=sys.argv[2])
+        train(epochs=int(sys.argv[2]))
     else: 
         raise ValueError(arg+" not a valid operator. Please enter argument \'generate\' or \'train\'")
         
