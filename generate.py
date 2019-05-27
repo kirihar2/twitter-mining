@@ -26,6 +26,7 @@ def generate(model_version=0):
     return textgen2.generate()
 
 def updateCurrentModelFilename():
+    version = getLatestVersionNumber()
     trained_model_filename = 'weights/textgenrnn_weights_'+str(version)+'.hdf5'
     while os.path.isfile(trained_model_filename):
         version +=1
