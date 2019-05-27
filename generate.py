@@ -11,6 +11,7 @@ trained_model_filename = 'weights/textgenrnn_weights_'+str(version)+'.hdf5'
 latest_version =0
 def train(epochs=1,tweet_count=500):
     print("Epochs "+str(epochs))
+    updateCurrentModelFilename()
     textgen = textgenrnn()
     if not os.path.isfile(filename):
         getData(tweet_count)
@@ -35,7 +36,7 @@ def getLatestVersionNumber():
     return latest_version - 1 if latest_version > 0 else 0
 def main():
     # print command line arguments
-    latest_version = getLatestVersionNumber()
+    latest_version = getLatestVersionNumber()    
     print("Current latest version "+ str(latest_version))
     arg = sys.argv[1]
     if arg == "generate": 
